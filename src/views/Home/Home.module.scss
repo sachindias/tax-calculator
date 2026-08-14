@@ -1,0 +1,816 @@
+.PageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding: 36px;
+  background-color: var(--lighter-grey);
+  box-sizing: border-box;
+}
+
+/* --------------------------------
+   Header
+-------------------------------- */
+
+.TitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.Title {
+  margin: 0 0 12px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.TitleContainer h2 {
+  margin: 0;
+  color: var(--grey);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+/* --------------------------------
+   Form
+-------------------------------- */
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  padding: 36px;
+  background-color: white;
+  border: 1px solid var(--light-grey);
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.FormGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.FormGroup > label {
+  margin-bottom: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+.FormGroup label span {
+  font-weight: 400;
+  color: var(--grey);
+}
+
+
+/* --------------------------------
+   Inputs
+-------------------------------- */
+
+.InputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.InputWithPrefix {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 42px;
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  background-color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.InputWithPrefix span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 100%;
+  background-color: #f3f4f6;
+  color: var(--grey);
+  font-size: 15px;
+  font-weight: 600;
+  border-right: 1px solid var(--light-grey);
+}
+
+.InputWithPrefix input {
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: var(--dark-grey);
+  box-sizing: border-box;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.InputWithPrefix input::-webkit-outer-spin-button,
+.InputWithPrefix input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.InputWithPrefix:focus-within {
+  border-color: #2563eb;
+  box-shadow:
+    0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+
+/* --------------------------------
+   Selects
+-------------------------------- */
+
+.FormGroup select {
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--dark-grey);
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.FormGroup select:focus {
+  border-color: #2563eb;
+  box-shadow:
+    0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+
+/* --------------------------------
+   £ / % Toggle
+-------------------------------- */
+
+.Toggle {
+  display: flex;
+  flex-shrink: 0;
+  height: 42px;
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.Toggle button {
+  width: 42px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: #f3f4f6;
+  color: var(--grey);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.Toggle button:hover {
+  background-color: #e5e7eb;
+}
+
+.Toggle .Active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.Toggle .Active:hover {
+  background-color: #2563eb;
+}
+
+
+/* --------------------------------
+   Help Text
+-------------------------------- */
+
+.HelpText {
+  margin: 7px 0 0;
+  color: var(--grey);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------
+   Pension Controls
+-------------------------------- */
+
+.PensionControls {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.PensionControls > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.ControlLabel {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--grey);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.PensionControls .Toggle {
+  width: 100%;
+}
+
+.PensionControls .Toggle button {
+  flex: 1;
+}
+
+.PensionFrequency {
+  display: flex;
+  flex-direction: column;
+}
+
+.PensionFrequency select {
+  width: 100%;
+}
+
+
+/* --------------------------------
+   Pension Input Boxes
+-------------------------------- */
+
+.PensionInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.PensionBox {
+  padding: 16px;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.PensionBox label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark-grey);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.PensionBox .InputWithPrefix {
+  width: 100%;
+  background-color: white;
+}
+
+
+/* --------------------------------
+   Calculate Button
+-------------------------------- */
+
+.CalculateButton {
+  width: 100%;
+  height: 46px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.CalculateButton:hover {
+  background-color: #1d4ed8;
+}
+
+.CalculateButton:active {
+  transform: translateY(1px);
+}
+
+
+/* --------------------------------
+   Error
+-------------------------------- */
+
+.ErrorMessage {
+  margin: -8px 0 12px;
+  padding: 11px 13px;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+/* --------------------------------
+   Fixed Frequency
+-------------------------------- */
+
+.FixedFrequency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  background-color: #f3f4f6;
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+
+/* --------------------------------
+   Student Loan
+-------------------------------- */
+
+.StudentLoanSelect {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* --------------------------------
+   Student Loan Info
+-------------------------------- */
+
+.InfoContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.InfoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--light-grey);
+  border-radius: 50%;
+  background-color: white;
+  color: var(--grey);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: serif;
+  cursor: help;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.InfoButton:hover,
+.InfoButton:focus {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  outline: none;
+}
+
+
+/* --------------------------------
+   Student Loan Information Box
+-------------------------------- */
+
+.InfoBox {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 10px);
+  left: 50%;
+
+  width: 520px;
+  padding: 22px;
+
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  background-color: white;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.14);
+
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform:
+    translate(-50%, -4px);
+
+  transition:
+    opacity 0.15s ease,
+    visibility 0.15s ease,
+    transform 0.15s ease;
+}
+
+.InfoContainer:hover .InfoBox,
+.InfoContainer:focus-within .InfoBox {
+  opacity: 1;
+  visibility: visible;
+  transform:
+    translate(-50%, 0);
+}
+
+.InfoBox > strong {
+  display: block;
+  margin-bottom: 16px;
+
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+.InfoBox p {
+  margin: 0 0 14px;
+
+  color: var(--grey);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.InfoBox p:last-child {
+  margin-bottom: 0;
+}
+
+.InfoBox p strong {
+  color: var(--dark-grey);
+}
+
+
+/* --------------------------------
+   Checkbox
+-------------------------------- */
+
+.CheckboxLabel {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+  margin-bottom: 0 !important;
+  cursor: pointer;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--dark-grey) !important;
+}
+
+.CheckboxLabel input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.PostgraduateOption {
+  margin-top: 2px;
+}
+
+
+/* --------------------------------
+   Results
+-------------------------------- */
+
+.ResultsContainer {
+  width: 100%;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--light-grey);
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.ResultsHeader {
+  margin-bottom: 18px;
+}
+
+.ResultsHeader h2 {
+  margin: 0 0 4px;
+  color: var(--dark-grey);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ResultsHeader p {
+  margin: 0;
+  color: var(--grey);
+  font-size: 13px;
+}
+
+
+/* --------------------------------
+   Results Table
+-------------------------------- */
+
+.ResultsTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--light-grey);
+  border-radius: 7px;
+  background-color: white;
+}
+
+.ResultsTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.ResultsTable th,
+.ResultsTable td {
+  padding: 12px 13px;
+  border-bottom: 1px solid #eef0f2;
+  text-align: right;
+  white-space: normal;
+}
+
+.ResultsTable th:first-child,
+.ResultsTable td:first-child {
+  width: 34%;
+}
+
+.ResultsTable th:not(:first-child),
+.ResultsTable td:not(:first-child) {
+  width: 22%;
+}
+
+.ResultsTable th:first-child,
+.ResultsTable td:first-child {
+  text-align: left;
+}
+
+.ResultsTable th {
+  background-color: #f3f4f6;
+  color: var(--dark-grey);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ResultsTable td {
+  color: var(--dark-grey);
+  font-size: 13px;
+}
+
+.ResultsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.TableSectionHeader th {
+  padding: 9px 13px;
+  border-bottom: 1px solid #dbeafe;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.AdditionRow td:first-child,
+.AdditionRow td:not(:first-child) {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.DeductionRow td:first-child,
+.DeductionRow td:not(:first-child) {
+  background-color: #fff7ed;
+  color: #9a3412;
+}
+
+.EmployeePensionRow td {
+  background-color: #f3f4f6;
+  color: var(--dark-grey);
+}
+
+.IncomeTaxRow td {
+  border-top: 2px solid #d1d5db;
+  font-weight: 400;
+}
+
+.TaxBandHeader td {
+  padding: 8px 13px 6px;
+  background-color: #f8fafc;
+  color: var(--dark-grey);
+  text-align: left !important;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.TaxBandHeader span {
+  margin-left: 7px;
+  color: var(--grey);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.TaxBandRow td:first-child {
+  padding-left: 29px;
+  color: var(--grey);
+  font-size: 12px;
+}
+
+.TaxBandRow td {
+  background-color: #fbfcfd;
+  color: var(--grey);
+  font-size: 12px;
+}
+
+.TaxBandRate,
+.TaxBandAmount {
+  display: block;
+}
+
+.TaxBandRate {
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+.TaxBandAmount {
+  margin-top: 2px;
+  color: var(--grey);
+  font-size: 11px;
+}
+
+
+/* --------------------------------
+   Take Home Row
+-------------------------------- */
+
+.TakeHomeRow td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+  border-top: 1px solid #dbeafe;
+}
+
+.TotalPensionRow td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+  border-top: 1px solid #dbeafe;
+}
+
+
+/* --------------------------------
+   Tax Section
+-------------------------------- */
+
+.SectionBreak td {
+  border-top: 2px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.TotalTaxRow td {
+  padding-top: 14px;
+  font-weight: 700;
+  border-top: 1px solid #d1d5db;
+}
+
+
+/* --------------------------------
+   Results Note
+-------------------------------- */
+
+.ResultsNote {
+  margin-top: 13px;
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------
+   Responsive
+-------------------------------- */
+
+@media (max-width: 700px) {
+  .PageContainer {
+    padding: 24px 16px;
+  }
+
+  .TitleContainer {
+    margin-bottom: 40px;
+  }
+
+  .Title {
+    font-size: 28px;
+  }
+
+  .TitleContainer h2 {
+    font-size: 16px;
+  }
+
+  .Form {
+    padding: 24px;
+  }
+
+  .InfoBox {
+    width: 430px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .InputRow {
+    flex-wrap: wrap;
+  }
+
+  .InputWithPrefix {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .Toggle {
+    flex: 1;
+  }
+
+  .Toggle button {
+    width: 50%;
+  }
+
+  .FormGroup select {
+    flex: 1;
+  }
+
+  .PensionControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .PensionControls > div {
+    width: 100%;
+  }
+
+  .PensionInputs {
+    grid-template-columns: 1fr;
+  }
+
+  .InfoBox {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    width: calc(100vw - 32px);
+    max-height: 80vh;
+    overflow-y: auto;
+    transform:
+      translate(-50%, -48%);
+  }
+
+  .InfoContainer:hover .InfoBox,
+  .InfoContainer:focus-within .InfoBox {
+    transform:
+      translate(-50%, -50%);
+  }
+
+  .ResultsContainer {
+    padding: 16px;
+  }
+
+  .ResultsTable th,
+  .ResultsTable td {
+    padding: 10px 9px;
+    font-size: 12px;
+  }
+}
