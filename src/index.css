@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --lighter-grey: #f0f0f0;
+  --light-grey: #DADADA;
+  --medium-grey: #A9A9A9;
+  --dark-grey: #4F4F4F;
+
+  --blue-grey: #919aa0;
+
+  background-color: var(--lighter-grey);
+
+  --font-body: "DM Sans", sans-serif;
+  --font-serif: "Lora", serif;
+  --font-display: "Forum", serif;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--blue-grey);
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+}
+
+h4 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+body {
+  margin: 0;
+}

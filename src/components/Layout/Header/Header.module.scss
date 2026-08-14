@@ -1,0 +1,39 @@
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lighter-grey);
+    border-bottom: 1px solid color-mix(in srgb, var(--medium-grey) 60%, transparent);
+}
+
+.HeaderTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: 200px;
+}
+
+.HeaderTitle {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.HeaderIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.Divider {
+    width: 1px;
+    height: 28px;
+    background-color: var(--light-grey);
+}
+
+.PageLinksContainer {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 18px;
+    margin-right: 200px;
+}
