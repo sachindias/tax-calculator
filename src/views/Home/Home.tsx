@@ -60,16 +60,16 @@ type ScenarioResult = {
 
 const studentLoanDescriptions = {
   plan1:
-    'NI & pre-2012 England & Wales undergraduate loans.',
+    'NI & pre-2012 England & Wales',
 
   plan2:
-    'England & Wales undergraduate loans from September 2012 onwards.',
+    'England (2012-2022) & Wales post-2012.',
 
   plan4:
-    'Scotland undergraduate loans.',
+    'Scotland post-1998.',
 
   plan5:
-    'England undergraduate loans from August 2023 onwards.',
+    'England post-2023.',
 }
 
 const STUDENT_LOAN_THRESHOLDS: Record<
